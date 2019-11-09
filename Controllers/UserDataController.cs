@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNet.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using OnyxPlataform.Models;
 using System.Security.Claims;
 
 namespace OnyxPlataform.Controllers
@@ -19,17 +22,17 @@ namespace OnyxPlataform.Controllers
         //index de usuarios
         public async Task<IActionResult> Index()
         {
-            var list= await _ContextUserDataList.ToListAsync();
+            var list= await _Context.UserDataList.ToListAsync();
             return View(list);
         }
         //creacion de  los datos
         //funcion que crea los datos
         [HttpGet]
-        public IActionResult Create()
+        public IActionResult Create(String id)
         {
             UserData temp=new UserData();
-            temp.UserDataID=ID;
-            temp.UserDataId=Convert.ToString(User.GetUserId());
+            //temp.UserDataID=ID;
+            temp.UserDataID=id;
 
             return View("Create", temp);
         }
