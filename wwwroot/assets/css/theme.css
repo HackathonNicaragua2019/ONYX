@@ -243,3 +243,118 @@
       margin-left: auto;
     }
   }
+/* Navigation / superfish skin
+/* ========================================================================== */
+.navigation {
+    position: relative;
+    text-align: center;
+    line-height: 0;
+  }
+  .navigation .nav.sf-menu {
+    line-height: 1.72;
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto !important;
+  }
+  .navigation ul {
+    list-style: none;
+  }
+  /* SUPERFISH ESSENTIAL STYLES */
+  .sf-menu {
+    margin: 0;
+    padding: 0;
+  }
+  .sf-menu li {
+    position: relative;
+  }
+  .sf-menu ul {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+  }
+  .sf-menu > li {
+    float: left;
+  }
+  .sf-menu li:hover > ul,
+  .sf-menu li.sfHover > ul {
+    display: block;
+  }
+  .sf-menu a {
+    display: block;
+    position: relative;
+  }
+  .sf-menu ul ul {
+    top: 0;
+    left: 100%;
+  }
+  .sf-menu ul {
+    min-width: 12em;
+    /* submenu width */
+  }
+  /* SUPERFISH THEME SKIN */
+  .sf-menu {
+    /*margin-right: -1em;*/
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .sf-menu.nav > li > a:hover,
+  .sf-menu.nav > li > a:focus {
+    background-color: transparent;
+  }
+  .sf-menu.nav > li > a,
+  .sf-menu ul li > a {
+    padding: 16px 15px 16px 15px;
+  }
+  .sf-menu ul li > a {
+    padding: 8px 15px 8px 15px;
+  }
+  .is-sticky .sf-menu.nav > li > a,
+  .is-sticky .sf-menu ul li > a {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+  .sf-menu .megamenu ul li > a {
+    padding: 3px 15px 3px 15px;
+  }
+  .sf-menu a {
+    color: #232323;
+  }
+  .sf-menu a:hover {
+    color: #ffffff;
+  }
+  .sf-menu li:hover,
+  .sf-menu li.sfHover,
+  .sf-menu li.sfHover > a,
+  .sf-menu li.active {
+    background-color: #232323;
+    color: #ffffff;
+  }
+  .sf-menu li.active > a {
+    color: #ffffff;
+  }
+  .sf-menu ul {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+  .sf-menu ul {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .sf-menu ul ul {
+    margin-left: 0;
+  }
+  .sf-menu ul li {
+    background: #ffffff;
+  }
+  .sf-menu ul a {
+    text-transform: none;
+    font-weight: 400;
+    text-decoration: none;
+    color: #232323;
+  }
+  .sf-menu ul a:hover {
+    color: #232323;
+    background-color: #e9e9e9;
+  }
