@@ -3099,6 +3099,76 @@
     padding: 0;
     line-height: 1;
   }
+  .top-products-carousel .owl-theme .owl-controls .owl-dots {
+    line-height: 1;
+  }
+  .top-products-carousel .owl-prev,
+  .top-products-carousel .owl-next {
+    position: absolute;
+    top: 50%;
+    border: solid 3px #e9e9e9;
+    color: #e9e9e9;
+    height: 37px;
+    width: 37px;
+    line-height: 37px;
+    text-align: center;
+  }
+  .top-products-carousel .owl-prev {
+    left: -50px;
+    margin-top: -16px !important;
+  }
+  .top-products-carousel .owl-next {
+    right: -50px;
+    margin-top: -16px !important;
+  }
+  .top-products-carousel .owl-prev .fa,
+  .top-products-carousel .owl-next .fa {
+    color: #e9e9e9;
+    font-size: 24px !important;
+    line-height: 30px;
+  }
+  .top-products-carousel .owl-prev:hover,
+  .top-products-carousel .owl-next:hover {
+    border-color: #000000;
+    color: #000000;
+  }
+  .top-products-carousel .owl-prev:hover .fa,
+  .top-products-carousel .owl-next:hover .fa {
+    color: #000000;
+  }
+  .product-single .badges {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    width: 50px;
+    z-index: 2;
+  }
+  .product-single .badges div {
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 20px;
+    margin-bottom: 10px;
+    border: solid 3px #232323;
+    text-transform: uppercase;
+    text-align: center;
+    color: #232323;
+  }
+  .product-single .badges div.hot {
+    border-color: #ea0000;
+    color: #ea0000;
+  }
+  .product-single .btn-zoom {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2;
+    padding: 0;
+    font-size: 12px;
+    line-height: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    color: #ffffff;
+  }
 
   
 
