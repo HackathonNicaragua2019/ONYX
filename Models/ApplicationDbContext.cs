@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using OnyxPlataform.Models;
 
 namespace OnyxPlataform.Models
 {
-    public class AplicationDbContext : DbContext
+    public class AplicationDbContext : IdentityDbContext
     {
         public AplicationDbContext(DbContextOptions<AplicationDbContext> options) : base(options) { }
 
