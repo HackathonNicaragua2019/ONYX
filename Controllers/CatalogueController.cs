@@ -2,56 +2,57 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using OnyxPlataform.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
 namespace OnyxPlataform.Controllers
 {
-    public class StoreController : Controller
+    public class CatalogueController : Controller
     {
-        //readonlydata
+        //dato readonly
         public readonly AplicationDbContext _Context;
-        //constructor del controlador
-        public StoreController(AplicationDbContext context){
-            _Context=context;
+        //constructor
+        public CatalogueController(AplicationDbContext Context){
+            _Context=Context;
         }
+        //index de los controladores
         public async Task<IActionResult> Index()
         {
-            var list=await _Context.StoreList.ToListAsync();
+            var list= await _Context.CatalogueList.ToListAsync();
             return View(list);
         }
-        //creacion de una Tienda
+        //funcion que crea los datos
         [HttpGet]
         public IActionResult Create(string ID)
         {
-            Store temp=new Store();
-            temp.UserDataId=ID;
+            Catalogue temp=new Catalogue();
+            temp.CatalogueID=ID;
             Random random= new Random();
-            temp.StoreId=Convert.ToString(random.Next(1,1000)+random.Next(1,12200));
+            temp.CatalogueID=Convert.ToString(random.Next(1,1000)+random.Next(1,12200));
 
             return View("Create", temp);
         }
-        //funcion que agrega el Storeo a la base de datos
+        //funcion que agrega el Catalogueo a la base de datos
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Store temp)
+        public async Task<IActionResult> Create(Catalogue temp)
         {
             if(ModelState.IsValid){
-                _Context.StoreList.Add(temp);
+                _Context.CatalogueList.Add(temp);
                await  _Context.SaveChangesAsync();
             }
-            return View("Index",await _Context.StoreList.ToListAsync());
+            return View("Index",await _Context.CatalogueList.ToListAsync());
         }
-
-        //funcion que edita una tienda
+         //funcion que edita una tienda
         [HttpGet]
         public async Task<IActionResult> Edit(string id)
         {
             if(id==null){
                 return NotFound();
             }
-            Store temp=await _Context.StoreList.FindAsync(id);
+            Catalogue temp=await _Context.CatalogueList.FindAsync(id);
             if(temp==null){
                 return NotFound();
             }
@@ -60,7 +61,7 @@ namespace OnyxPlataform.Controllers
         //funcion que edita en post los datos
          [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, Store temp)
+        public async Task<IActionResult> Edit(string id, Catalogue temp)
         {
             if(id==null){
                 return NotFound();
@@ -71,23 +72,22 @@ namespace OnyxPlataform.Controllers
                 }catch(DbUpdateConcurrencyException){
                     throw;
                 }
-                return View("Index",await _Context.StoreList.ToListAsync());
+                return View("Index",await _Context.CatalogueList.ToListAsync());
             }
-            return View("Index",await _Context.StoreList.ToListAsync());
+            return View("Index",await _Context.CatalogueList.ToListAsync());
             
         }
-        //funcion que elimina un tienda
-        public async Task<IActionResult> Delete(string id)
+        //funcion que elimina un Calogo
+         public async Task<IActionResult> Delete(string id)
         {
-            Store temp= await _Context.StoreList.FindAsync(id);
+            Catalogue temp= await _Context.CatalogueList.FindAsync(id);
             if(temp==null){
                 return NotFound();
             }
             _Context.Remove(temp);
            await _Context.SaveChangesAsync();
             
-            return View("Index",await _Context.StoreList.ToListAsync());
+            return View("Index",await _Context.CatalogueList.ToListAsync());
         }
-    
     }
 }
