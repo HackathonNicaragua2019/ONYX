@@ -10,6 +10,12 @@ namespace OnyxPlataform.Models
     public class AplicationDbContext : DbContext
     {
         public AplicationDbContext(DbContextOptions<AplicationDbContext> options) : base(options) { }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            
+        }
         
         //definicion de las tablas
         public DbSet<UserData> UserDataList { get; set;}
