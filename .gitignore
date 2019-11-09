@@ -18,7 +18,7 @@ nupkg/
 *.user
 *.userosscache
 *.sln.docstates
-
+OnyxPlataform.csproj
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
