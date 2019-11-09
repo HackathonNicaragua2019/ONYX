@@ -284,3 +284,170 @@ jQuery(document).ready(function () {
             });
         }
     }
+// countdown
+    // ---------------------------------------------------------------------------------------
+    if ($().countdown) {
+        var austDay = new Date();
+        austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
+        $('#dealCountdown1').countdown({until: austDay});
+        $('#dealCountdown2').countdown({until: austDay});
+        $('#dealCountdown3').countdown({until: austDay});
+    }
+    // Google map
+    // ---------------------------------------------------------------------------------------
+    if (typeof google === 'object' && typeof google.maps === 'object') {
+        if ($('#map-canvas').length) {
+            var map;
+            var marker;
+            var image = 'assets/img/icon-google-map.png'; // marker icon
+            google.maps.event.addDomListener(window, 'load', function () {
+                var mapOptions = {
+                    scrollwheel: false,
+                    zoom: 12,
+                    center: new google.maps.LatLng(40.9807648, 28.9866516) // map coordinates
+                };
+
+                map = new google.maps.Map(document.getElementById('map-canvas'),
+                    mapOptions);
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(41.0096559,28.9755535), // marker coordinates
+                    map: map,
+                    icon: image,
+                    title: 'Hello World!'
+                });
+            });
+        }
+    }
+    // Price range / need jquery ui
+    // ---------------------------------------------------------------------------------------
+    if ($.ui) {
+        if ($(priceSliderRange).length) {
+            $(priceSliderRange).slider({
+                range: true,
+                min: 0,
+                max: 500,
+                values: [75, 300],
+                slide: function (event, ui) {
+                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+                }
+            });
+            $("#amount").val(
+                "$" + $("#slider-range").slider("values", 0) +
+                " - $" + $("#slider-range").slider("values", 1)
+            );
+        }
+    }
+    // Shop categories widget slide in/out
+    // ---------------------------------------------------------------------------------------
+    $('.shop-categories .arrow').click(
+        function () {
+
+            $(this).parent().parent().find('ul.children').removeClass('active');
+            $(this).parent().parent().find('.fa-angle-up').addClass('fa-angle-down').removeClass('fa-angle-up');
+            if ($(this).parent().find('ul.children').is(":visible")) {
+                //$(this).find('.fa-angle-up').addClass('fa-angle-down').removeClass('fa-angle-up');
+                //$(this).parent().find('ul.children').removeClass('active');
+            }
+            else {
+                $(this).find('.fa-angle-down').addClass('fa-angle-up').removeClass('fa-angle-down');
+                $(this).parent().find('ul.children').addClass('active');
+            }
+            $(this).parent().parent().find('ul.children').each(function () {
+                if (!$(this).hasClass('active')) {
+                    $(this).slideFadeOut();
+                }
+                else {
+                    $(this).slideFadeIn();
+                }
+            });
+        }
+    );
+    $('.shop-categories ul.children').each(function () {
+        if (!$(this).hasClass('active')) {
+            $(this).hide();
+        }
+    });
+});
+
+jQuery(window).load(function () {
+    // Preloader
+    $('#status').fadeOut();
+    $('#preloader').delay(200).fadeOut(200);
+    // Isotope
+    if ($().isotope) {
+        isotopeContainer.isotope({ // initialize isotope
+            itemSelector: '.isotope-item' // options...
+            //,transitionDuration: 0 // disable transition
+        });
+        isotopeFiltrable.click(function () { // filter items when filter link is clicked
+            var selector = $(this).attr('data-filter');
+            isotopeFiltrable.parent().removeClass('current');
+            $(this).parent().addClass('current');
+            isotopeContainer.isotope({filter: selector});
+            return false;
+        });
+        isotopeContainer.isotope('reLayout'); // layout/reLayout
+    }
+    // Scroll to hash
+    if (location.hash != '') {
+        var hash = '#' + window.location.hash.substr(1);
+        if (hash.length) {
+            body.delay(0).animate({
+                scrollTop: jQuery(hash).offset().top
+            }, {
+                duration: 1200,
+                easing: "easeInOutExpo"
+            });
+        }
+    }
+    // OwlSliders
+    if ($().owlCarousel) {
+        // Hot deal carousel
+        // must initialized after counters
+        if (hotDealsCarousel.length) {
+            hotDealsCarousel.owlCarousel({
+                autoplay: false,
+                loop: true,
+                margin: 30,
+                dots: true,
+                nav: false,
+                navText: [
+                    "<i class='fa fa-angle-left'></i>",
+                    "<i class='fa fa-angle-right'></i>"
+                ],
+                responsive: {
+                    0: {items: 1},
+                    479: {items: 1},
+                    768: {items: 1},
+                    991: {items: 1},
+                    1024: {items: 1}
+                }
+            });
+        }
+    }
+    // Refresh owl carousels/sliders
+    owlCarouselSelector.trigger('refresh');
+    owlCarouselSelector.trigger('refresh.owl.carousel');
+});
+
+jQuery(window).resize(function () {
+    // Refresh owl carousels/sliders
+    owlCarouselSelector.trigger('refresh');
+    owlCarouselSelector.trigger('refresh.owl.carousel');
+    // Refresh isotope
+    if ($().isotope) {
+        isotopeContainer.isotope('reLayout'); // layout/relayout on window resize
+    }
+    if ($().sticky) {
+        $('.header.fixed').sticky('update');
+    }
+});
+
+jQuery(window).scroll(function () {
+    // Refresh owl carousels/sliders
+    owlCarouselSelector.trigger('refresh');
+    owlCarouselSelector.trigger('refresh.owl.carousel');
+    if ($().sticky) {
+        $('.header.fixed').sticky('update');
+    }
+});
