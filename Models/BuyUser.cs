@@ -2,7 +2,7 @@ using System;
 using OnyxPlataform.Models;
 namespace OnyxPlataform.Models
 {
-    class BuyUser
+    public class BuyUser
     {
         //definicion de llavfe foranea
         public string UserDataId{get;set;}
