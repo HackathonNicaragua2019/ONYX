@@ -3,45 +3,200 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - OnyxPlataform</title>
+    <title>@ViewData["Title"] - OnyxPlataform </title>
 
     <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+       <partial name="_StylesPartial">
+        <link href="~/wwwroot/assets/css/theme-color.css">
+        
     </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
-              crossorigin="anonymous"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
-    </environment>
-    <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">OnyxPlataform</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+<body id="home" class="wide">
+   
 
-                        <partial name="_LoginPartial">
+    <!-- Header top bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <ul class="list-inline">
+                    <li class="icon-user"><a asp-controller="User" asp-action="Index"><i class="fa fa-user"></i> <span> Ingresar </span></a></li>
+                    <li class="icon-form"><a href="login.html"><img src="assets/img/" alt=""/> <span>No eres miembro? <span class="colored"> Crear una cuenta </span></span></a></li>
+                    <li><a href="onyxplatform@domain.com"><i class="fa fa-envelope"></i> <span>onyxplatform@domai.com</span></a></li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="list-inline">
+                    <li class="hidden-xs"><a href="#"> Acerca de </a></li>
+                    <li class="hidden-xs"><a href="#"> Blog </a></li>                             
+                    <li class="hidden-xs"><a href="#"> Mi cuenta </a></li>
+                    <li class="hidden-xs"><a href="#"> Contactanos </a></li>
+                    <li class="hidden-xs"><a href="#"> Wish List </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /Header top bar -->
+
+     <!-- HEADER -->
+    <header class="header fixed">
+        <div class="header-wrapper">
+            <div class="container">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html"><img src="~/assets/img/logo-bella-shop.png" alt="Bella Shop"/></a>
+                </div>
+                <!-- /Logo -->
+
+                <!-- Header search -->
+                <div class="header-search">
+                    <input class="form-control" type="text" placeholder="What are you looking?"/>
+                    <button><i class="fa fa-search"></i></button>
+                </div>
+                <!-- /Header search -->
+
+                <!-- Header shopping cart -->
+                <div class="header-cart">
+                    <div class="cart-wrapper">
+                        <a href="wishlist.html" class="btn btn-theme-transparent hidden-xs hidden-sm"><i class="fa fa-heart"></i></a>
+                        <a href="compare-products.html" class="btn btn-theme-transparent hidden-xs hidden-sm"><i class="fa fa-exchange"></i></a>
+                        <a href="#" class="btn btn-theme-transparent" data-toggle="modal" data-target="#popup-cart"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs"> 0 item(s) - $0.00 </span> <i class="fa fa-angle-down"></i></a>
                         
-                    </ul>
+                        
+                        <!-- Mobile menu toggle button -->
+                        <a href="#" class="menu-toggle btn btn-theme-transparent"><i class="fa fa-bars"></i></a>
+                        <!-- /Mobile menu toggle button -->
+                    </div>
+                </div>
+                <!-- Header shopping cart -->
+
+            </div>
+
+            <div class="navigation-wrapper">
+                <div class="container">
+                    <!-- Navigation -->
+                    <nav class="navigation closed clearfix">
+                        <a href="#" class="menu-toggle-close btn"><i class="fa fa-times"></i></a>
+                        <ul class="nav sf-menu">
+                            <li class="active"><a href="index.html"> Home </a>
+                            </li>
+                            <li><a href=""> Tiendas </a>
+                                <ul>
+                                    
+                                </ul>
+                            </li>
+                            <li><a href="#"> Blog </a>
+                                <ul>
+                                    
+                                </ul>
+                            </li>
+                            <li><a href=""> ItemX </a>
+                                <ul>
+                                    
+                                </ul>
+                            </li>
+                            <li class="megamenu"><a href="#">Features</a>
+                                <ul>
+                                    <li class="row">
+                                        <div class="col-md-2">
+                                            <h4 class="block-title"><span>Womens</span></h4>
+                                            <ul>
+                                                
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <h4 class="block-title"><span>Mens</span></h4>
+                                            <ul>
+                                                
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <h4 class="block-title"><span>Pages</span></h4>
+                                            <ul>
+                                                
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-2 visible-xs">
+                                            <h4 class="block-title"><span>My Account</span></h4>
+                                            <ul>
+                                                <li><a href="accountinformation.html"> Account Information </a></li>
+                                                <li><a href="myaccount.html">My Account</a></li>                                        
+                                                <li><a href="cng-pw.html">Change Password</a></li>
+                                                <li><a href="address-book.html">Address Books</a></li>
+                                                <li><a href="order-history.html">Order History</a></li>
+                                                <li><a href="review-rating.html">Reviews and Ratings</a></li>
+                                                <li><a href="return.html">Returns Requests</a></li>
+                                                <li><a href="newsletter.html">Newsletter</a></li>
+                                                <li><a href="myaccount-leftsidebar.html">Left Sidebar</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h4 class="block-title"><span> ItemX </span></h4>
+                                            <ul>
+                                                <li><a href=""><strong> ItemX.1 </strong></a></li>
+                                                <li><a href=""><strong> ItemX.1 </strong></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="product-list">
+                                                <div class="media">
+                                                    <a class="pull-left media-link" href="#">
+                                                        <img class="media-object" src="assets/img/preview/shop/top-sellers-2.jpg" alt="">
+                                                        <i class="fa fa-plus"></i>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <h4 class="media-heading"><a href="#">Standard Product Header</a></h4>
+                                                        <div class="rating">
+                                                            <span class="star"></span><!--
+                                                            --><span class="star active"></span><!--
+                                                            --><span class="star active"></span><!--
+                                                            --><span class="star active"></span><!--
+                                                            --><span class="star active"></span>
+                                                        </div>
+                                                        <div class="price"><ins>$400.00</ins> <del>$425.00</del></div>
+                                                    </div>
+                                                </div>
+                                                <div class="media">
+                                                    <a class="pull-left media-link" href="#">
+                                                        <img class="media-object" src="assets/img/preview/shop/top-sellers-3.jpg" alt="">
+                                                        <i class="fa fa-plus"></i>
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <h4 class="media-heading"><a href="#">Standard Product Header</a></h4>
+                                                        <div class="rating">
+                                                            <span class="star"></span><!--
+                                                            --><span class="star active"></span><!--
+                                                            --><span class="star active"></span><!--
+                                                            --><span class="star active"></span><!--
+                                                            --><span class="star active"></span>
+                                                        </div>
+                                                        <div class="price"><ins>$400.00</ins> <del>$425.00</del></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="category.html">Men</a></li>
+                            <li><a href="category.html">Women</a></li>
+                            <li><a href="category.html">Kids</a></li>
+                            <li><a href="category.html">New</a></li>
+                            <li class="sale"><a href="category.html">Sale</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <!-- /Navigation -->
                 </div>
             </div>
-        </nav>
+        </div>
+
+
     </header>
+    <!-- /HEADER -->
+
+    
+
     <div class="container">
         <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3">
@@ -49,32 +204,13 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2019 - OnyxPlataform - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
-        </script>
-    </environment>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+   
 
     @RenderSection("Scripts", required: false)
 </body>
+
+    <environment include="Development">
+       <partial name="_StylesPartial">
+    </environment>
+    
 </html>

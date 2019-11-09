@@ -1,0 +1,108 @@
+/* Header
+/* ========================================================================== */
+
+.sticky-wrapper:not(.is-sticky) {
+    height: auto !important;
+}
+
+.header {
+    border-bottom: solid 3px #00b16a;
+}
+
+.wide .sticky-wrapper .header {
+    width: 100% !important;
+}
+
+.sticky-wrapper .header {
+    z-index: 20;
+}
+
+@media (max-width: 767px) {
+    .sticky-wrapper .header {
+        position: relative !important;
+        height: auto !important;
+    }
+}
+
+.header .header-wrapper {
+    padding: 30px 0;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.header .header-wrapper>.container {
+    position: relative;
+    min-height: 40px;
+}
+
+.is-sticky .header .header-wrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header .header-search {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 270px;
+    max-width: 100%;
+}
+
+@media (max-width: 991px) {
+    .header .header-search {
+        width: 170px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .header-search {
+        width: 100px;
+    }
+}
+
+.header .header-search .form-control {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+
+.header .header-search button {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    background-color: #ffffff;
+    border: none;
+    padding: 2px 8px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #232323;
+}
+
+.header .header-search button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -34px;
+    width: 34px;
+    height: 34px;
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+}
+
+.header .header-cart {
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+
+.header .navigation-wrapper {
+    border-top: solid 1px #d3d5d7;
+    background-color: #f5f6f7;
+}
+
+.header .navigation-wrapper.navigation-sticky {
+    width: 100%;
+}
