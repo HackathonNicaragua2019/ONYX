@@ -47,5 +47,27 @@ namespace OnyxPlataform.Controllers
             
             return View("Index",await _Context.ProductList.ToListAsync());
         }
+        //funcion que crea un producto
+           [HttpGet]
+        public IActionResult Create(string ID)
+        {
+            Product temp=new Product();
+            temp.CatalogueId=ID;
+            Random random= new Random();
+            temp.ProductID=Convert.ToString(random.Next(1,1000)+random.Next(1,12200));
+
+            return View("Create", temp);
+        }
+        //funcion que agrega el producto a la base de datos
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Product temp)
+        {
+            if(ModelState.IsValid){
+                _Context.ForumList.Add(temp);
+               await  _Context.SaveChangesAsync();
+            }
+            return View("Index",await _Context.ProductList.ToListAsync());
+        }
     }
 }
