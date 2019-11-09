@@ -24,7 +24,7 @@ namespace OnyxPlataform.Controllers
             return View(Lists);
         }
         //index de los productos de una tienda
-        public async Task<IActionResult> IndexStore(string storeid)
+        public IActionResult IndexStore(string storeid)
         {
             List<Product> pList=new List<Product>();
             foreach (var item in _Context.ProductList)
@@ -64,10 +64,43 @@ namespace OnyxPlataform.Controllers
         public async Task<IActionResult> Create(Product temp)
         {
             if(ModelState.IsValid){
-                _Context.ForumList.Add(temp);
+                _Context.ProductList.Add(temp);
                await  _Context.SaveChangesAsync();
             }
             return View("Index",await _Context.ProductList.ToListAsync());
+        }
+        //funcion que edita un producto
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(string id)
+        {
+            if(id==null){
+                return NotFound();
+            }
+            Product temp=await _Context.ProductList.FindAsync(id);
+            if(temp==null){
+                return NotFound();
+            }
+            return View(temp);
+        }
+        //funcion que realmente edita el dato
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(string id, Product temp)
+        {
+            if(id==null){
+                return NotFound();
+            }
+            if(ModelState.IsValid){
+                try{
+                    _Context.Update(temp);
+                }catch(DbUpdateConcurrencyException){
+                    throw;
+                }
+                return View("Index",await _Context.ProductList.ToListAsync());
+            }
+            return View("Index",await _Context.ProductList.ToListAsync());
+            
         }
     }
 }
