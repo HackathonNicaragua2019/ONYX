@@ -76,6 +76,18 @@ namespace OnyxPlataform.Controllers
             return View("Index",await _Context.StoreList.ToListAsync());
             
         }
+        //funcion que elimina un tienda
+        public async Task<IActionResult> Delete(string id)
+        {
+            Store temp= await _Context.StoreList.FindAsync(id);
+            if(temp==null){
+                return NotFound();
+            }
+            _Context.Remove(temp);
+           await _Context.SaveChangesAsync();
+            
+            return View("Index",await _Context.StoreList.ToListAsync());
+        }
     
     }
 }
