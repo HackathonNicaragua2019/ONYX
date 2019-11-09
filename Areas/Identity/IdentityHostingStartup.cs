@@ -16,8 +16,8 @@ namespace OnyxPlataform.Areas.Identity
         {
             builder.ConfigureServices((context, services) => {
                 services.AddDbContext<OnyxPlataformIdentityDbContext>(options =>
-                    options.UseSqlServer(
-                        context.Configuration.GetConnectionString("OnyxPlataformIdentityDbContextConnection")));
+                    options.UseMySql(
+                        context.Configuration.GetConnectionString("OnyxPlataformContext")));
 
                 services.AddDefaultIdentity<IdentityUser>()
                     .AddEntityFrameworkStores<OnyxPlataformIdentityDbContext>();
