@@ -1,4 +1,4 @@
-using system;
+using System;
 using OnyxPlataform;
 namespace OnyxPlataform.Models
 {
@@ -14,7 +14,7 @@ namespace OnyxPlataform.Models
         public string CourseDescription{get;set;}
         public int CourseCapacity{get;set;}
         //referencia de un dato de la clase ClassRomm
-        public ClassRomm clasroom{get;set;}
+        public ClassRoom clasroom{get;set;}
 
-
+    }
 }

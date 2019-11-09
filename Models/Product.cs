@@ -11,7 +11,7 @@ namespace OnyxPlataform.Models
         public string ProductSerialNumber{get;set;}
         public double ProductPrice{get;set;}
         public string ProductColor{get;set;}
-        public string ProductWeight{gte;set;}
+        public string ProductWeight{get;set;}
 
         //referencia al objeto
         public Catalogue catalogue{get;set;}

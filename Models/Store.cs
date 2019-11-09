@@ -13,7 +13,6 @@ namespace OnyxPlataform.Models
         public string StoreDescription{get;set;}
         public string StoreDirection{get;set;}
         public string StoreMotto{get;set;}
-        public string StoreName{get;set;}
         //referencia al objeto de la clase User
         public UserData user{get;set;}
     }
