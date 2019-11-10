@@ -25,7 +25,7 @@ var themeConfig = {
     initialize: function () {
         var $this = this;
         if (this.init) return;
-
+        
         $('head').append($('<link rel="stylesheet">').attr('href', '~/assets/js/theme-config.css'));
         
         $this.setColor('yellow-1');
