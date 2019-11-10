@@ -5,8 +5,8 @@
     </h3>
     <div class="card-body">
         <form asp-controller="StoreController" asp-action="Create" method="POST">
-            <input asp-for="@Model.StoreId" value="@Model.StoreId">
-            <input asp-for="@Model.UserDataId" value="@Model.UserDataId">
+            <input type="hidden" asp-for="@Model.StoreId" value="@Model.StoreId">
+            <input type="hidden" asp-for="@Model.UserDataId" value="@Model.UserDataId">
             <div class="form-group">
                 <label for="">Nombre de La tienda</label>
                 <input  class="form-control" asp-for="@Model.StoreName" id="" value="@Model.StoreName">
