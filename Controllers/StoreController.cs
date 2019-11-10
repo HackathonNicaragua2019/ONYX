@@ -25,7 +25,7 @@ namespace OnyxPlataform.Controllers
         public async Task<IActionResult> ShowStore(string Id)
         {
             Store temp=await _Context.StoreList.FindAsync(Id);
-            return View(temp);
+            return View("ShowStore",temp);
         }
         //creacion de una Tienda
         [HttpGet]
