@@ -251,6 +251,99 @@ a:hover .btn-play,
     color: #f1be03;
 }
 
-
+.wishlist td.total a:hover {
+    color: #f1be03;
+}
+.wishlist .media-link:after {   
+    background-color: rgba(241, 190, 3, 0);   
+}
+.wishlist .media-link:hover:after {
+    background-color: rgba(241, 190, 3, 0.7);
+}
+.compare-products .product .media-link:after {  
+    background-color: rgba(241, 190, 3, 0);   
+}
+.compare-products .product .media-link:hover:after {
+    background-color: rgba(241, 190, 3, 0.7);
+}
+.compare-products .product h4:hover,
+.compare-products .product h4 a:hover {
+    color: #f1be03;
+}
+#contact-form .alert { 
+    border-color: #f1be03;
+    background-color: #f1be03;   
+}
+.to-top {   
+    background-color: rgba(241, 190, 3, 0.5);
+    border: solid 2px #f1be03;   
+}
+.to-top:hover {   
+    border-color: #f1be03;
+    color: #f1be03;
+}
+.header-nav-1 .sf-arrows > li > .sf-with-ul:focus::after,
+.header-nav-1 .sf-arrows > li:hover > .sf-with-ul::after,
+.header-nav-1 .sf-arrows > li.active > .sf-with-ul::after,
+.header-nav-1 .sf-arrows > .sfHover > .sf-with-ul::after {
+    border-top-color: #f1be03;
+}
+.header-nav-5 .sf-menu > li:hover,
+.header-nav-5 .sf-menu li.active > a,
+.header-nav-5 .sf-menu a:hover,
+.header-nav-5 .sf-menu li.active,
+.header-nav-5 .sf-menu > li.active.sfHover > a,
+.header-nav-5 .sf-menu ul a:hover,
+.sf-menu li:hover,
+.header-nav-5 .sf-menu li.sfHover,
+.header-nav-5 .sf-menu li.sfHover > a {
+    color: #f1be03;
+}
+.header-nav-2 .sf-menu > li:hover,
+.header-nav-2 .sf-menu > li:hover > a,
+.header-nav-2 .sf-menu li.active,
+.header-nav-2 .sf-menu > li.sfHover,
+.header-nav-2 .sf-menu > li.sfHover > a {
+    background-color: #f1be03;
+}
+.header-nav-2 .sf-menu ul a:hover {
+    background-color: #f1be03;
+}
+.header-nav-3 .sf-menu > li:hover,
+.header-nav-3 .sf-menu > li:hover > a,
+.header-nav-3 .sf-menu li.active,
+.header-nav-3 .sf-menu > li.sfHover,
+.header-nav-3 .sf-menu > li.sfHover > a {
+    background-color: #f1be03;
+}
+.header-nav-3 .sf-menu ul a:hover {
+    background-color: #f1be03;
+}
+.information-title {
+    border-bottom: 3px solid #f1be03;   
+}
+.widget.account-details .widget-title {
+    border-bottom: 3px solid #f1be03;    
+}
+.widget.account-details li.active a {
+    color: #f1be03;
+}
+.widget.account-details li a:hover,
+.widget.account-details li a:focus,
+.details-box > ul li a:hover,
+.details-box > ul li a:focus {
+    color: #f1be03;
+}
+.social-icons a:hover {
+    color: #ffffff;
+}
+.header .navigation-wrapper {
+    background-color: #f5f6f7;
+    border-top: 1px solid #d3d5d7;
+}
+.btn-view-more-block {
+    background-color: #a5abb7;
+    border-color: #a5abb7;
+}
 
 
