@@ -25,6 +25,14 @@ namespace OnyxPlataform.Controllers
         public async Task<IActionResult> ShowStore(string Id)
         {
             Store temp=await _Context.StoreList.FindAsync(Id);
+            List<Catalogue> list=new List<Catalogue>();
+            foreach (var item in _Context.CatalogueList)
+            {
+                if(item.StoreId==temp.StoreId){
+                    list.Add(item);
+                }
+                ViewBag.productList=list;
+            }
             return View("ShowStore",temp);
         }
         //creacion de una Tienda

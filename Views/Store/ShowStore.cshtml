@@ -6,7 +6,46 @@
 <div class="container">
     <div class="row">
         <div class="col-xl-12">
-            
+            <div class="card mb-3">
+                <img src="" alt="">
+                <h5 class="card-title">
+                    @Model.StoreName
+                </h5>
+                <p class="card-text">
+                    @Model.StoreMotto
+                </p>
+
+            </div>
+            <h1 class="text">
+                Productos disponibles en 
+                @Model.StoreName
+            </h1>
+        </div>
+        <div class="row">
+            @foreach (var item in ViewBag.ProductList)
+            {
+                <div class="col-md-3 col-md-2">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <p><i class="fa fa-globe"></i> Foro Activo</p>
+                            </div>
+                            <div class="body">
+                                <img src="/img/item/forum.jpg" alt="Card image cap" class="card-img-top img-fluid mb-0">
+                                <h5 class="card-title">@item.CatalogueProductName</h5>
+                                <p> @item.CatalogueProductDescription
+                                    <br>
+                                    Tipo de producto: @item.CatalogueProductType
+                                    <br>
+                                    Marca: @item.CatalogueProductBrand
+                                </p>
+                            </div>
+                            <div class="card-footer text-muted text-right p-1">
+                                <p>opciones de ver y comprar</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+            }
         </div>
     </div>
 </div>
