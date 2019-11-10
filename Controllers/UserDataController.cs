@@ -1,13 +1,8 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using OnyxPlataform.Models;
-using System.Security.Claims;
 
 namespace OnyxPlataform.Controllers
 {
@@ -16,7 +11,7 @@ namespace OnyxPlataform.Controllers
         //readonly data
         public readonly AplicationDbContext _Context;
         //constructor
-        public UserDataController(AplicationDbContext context){
+        public UserDataController(AplicationDbContext context) {
             _Context=context;
         }
         //index de usuarios
