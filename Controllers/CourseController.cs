@@ -20,7 +20,7 @@ namespace OnyxPlataform.Controllers
         //index
         public async Task<IActionResult> Index()
         {
-            var list= await _context.CourseList.ToListAsync();
+            var list= await _Context.CourseList.ToListAsync();
             return View(list);
         }
         //creacion de un Course
@@ -29,7 +29,7 @@ namespace OnyxPlataform.Controllers
         public IActionResult Create(string ID)
         {
             Course temp=new Course();
-            temCourseId=ID;
+            temp.CourseId=ID;
             Random random= new Random();
             temp.CourseId=Convert.ToString(random.Next(1,1000)+random.Next(1,12200));
 
