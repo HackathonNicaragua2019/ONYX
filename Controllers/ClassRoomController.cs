@@ -19,11 +19,11 @@ namespace OnyxPlataform.Controllers
             _Context=context;
         }
         //index
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             /*var list= await _Context.ClassRoomList.ToListAsync();*/
 
-            return View(list);
+            return View();
         }
         //creacion de un classroom
         //funcion que crea los datos
