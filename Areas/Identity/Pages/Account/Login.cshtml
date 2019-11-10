@@ -14,7 +14,7 @@
             <div class="row" style="display: flex; justify-content: center;">
                 <div class="col-sm-6">
                     <h3 class="block-title"><span>Ingresar</span></h3>
-                    <form action="#" class="form-login">
+                    <form id="account" method="post" class="form-login">    
                         <div class="row">
                             <div class="col-md-12 hello-text-wrap">
                                 <span class="hello-text text-thin"> ¡Que bien¡ tenerte de nuevo por acá </span>
@@ -22,14 +22,15 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input asp-for="Input.Email" class="form-control" placeholder="Nombre de usuario"/>    
+                                    <input asp-for="Input.UserName" class="form-control" placeholder="Nombre de usuario"/>    
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input asp-for="Input.Password" class="form-control" type="password" placeholder="Contraseña">
+                                    <input asp-for="Input.Password" class="form-control" placeholder="Contraseña">
                                 </div>
                             </div>
+
                             <div class="col-md-12 col-lg-6">
                                 <div class="checkbox">
                                     <label><input type="checkbox"> Recuerdame </label>
@@ -41,7 +42,7 @@
                             </div>
 
                             <div class="col-md-6">
-                                <a class="btn btn-theme btn-block btn-theme-dark" href="#"> Entrar </a>
+                                <a onClick="document.getElementById('account').submit()" class="btn btn-theme btn-block btn-theme-dark" > Entrar </a>
                             </div>
 
                         </div>
@@ -67,8 +68,8 @@
                 <hr />
                 <div asp-validation-summary="All" class="text-danger"></div>
                 <div class="form-group">
-                    <label asp-for="Input.Email"></label>
-                    <input asp-for="Input.Email" class="form-control" />
+                    <label asp-for="Input.UserName"></label>
+                    <input asp-for="Input.UserName" class="form-control" />
                     <span asp-validation-for="Input.Email" class="text-danger"></span>
                 </div>
                 <div class="form-group">
@@ -132,4 +133,4 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
-} *@
+}*@
