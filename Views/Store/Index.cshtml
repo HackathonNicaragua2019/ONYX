@@ -2,7 +2,11 @@
 
 
 <div class="container">
-
-    
-
+    @foreach(var item in Model){
+        <div class="alert alert-primary" role="alert">
+            Nombre de la Tienda:  @item.StoreName 
+            <br>
+            <a asp-controller="Store" asp-action="ShowStore" asp-route-Id="@item.StoreId" class=" btn btn-primary bg-dark"> ver mas..</a>
+        </div>
+    }
 </div>

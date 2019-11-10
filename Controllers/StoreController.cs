@@ -35,10 +35,12 @@ namespace OnyxPlataform.Controllers
                 }
                 ViewBag.productList=list;
             }
-            return View("ShowStore",temp);
+            if(ViewBag.productList==null){
+                return NotFound();
+            }
+            return View(temp);
         }
         //creacion de una Tienda
-
         [Authorize]
         [HttpGet]
         public IActionResult Create(string ID)
