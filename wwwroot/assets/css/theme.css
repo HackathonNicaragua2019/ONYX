@@ -6060,4 +6060,241 @@
     background-color: #232323;
     color: #ffffff;
   }
-  
+  /* Contact form
+/* ========================================================================== */
+#contact-form textarea.form-control {
+    height: 180px;
+  }
+  #contact-form .alert {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 10px 15px;
+    border-color: #00b16a;
+    background-color: #00b16a;
+    color: #ffffff;
+  }
+  #contact-form .tooltip {
+    left: 15px !important;
+  }
+  #contact-form .tooltip-inner {
+    border-radius: 0;
+    padding: 10px 20px;
+    background-color: #000000;
+  }
+  #contact-form .tooltip-arrow {
+    border-top-color: #000000;
+  }
+  /* Contact info
+  /* ========================================================================== */
+  .contact-info .media .fa {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    border-radius: 20px;
+    margin-right: 15px;
+    text-align: center;
+    background-color: #d3d3d3;
+    color: #ffffff;
+  }
+  .contact-info .media-list {
+    margin-bottom: 30px;
+  }
+  .contact-info .media-body {
+    line-height: 22px;
+  }
+  /* 5.15 */
+  /* Google map
+  /* ========================================================================== */
+  .google-map,
+  #map-canvas {
+    min-height: 390px;
+    max-height: 390px;
+  }
+  @media (max-height: 600px) {
+    .google-map,
+    #map-canvas {
+      min-height: 390px;
+      max-height: 390px;
+    }
+  }
+  @media (max-height: 400px) {
+    .google-map,
+    #map-canvas {
+      min-height: 200px;
+      max-height: 200px;
+    }
+  }
+  /* 5.16 */
+  /* Back to top button
+  /* ========================================================================== */
+  .to-top {
+    z-index: 9999;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+    position: fixed;
+    bottom: -100px;
+    right: 20px;
+    margin-left: -20px;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    background-color: transparent;
+    background-color: rgba(0, 177, 106, 0.5);
+    border: solid 2px #00b16a;
+    color: #ffffff;
+  }
+  .to-top:hover {
+    background-color: #ffffff;
+    border-color: #00b16a;
+    color: #00b16a;
+  }
+  /* 6.0 */
+  /* 6.1 */
+  /* Header styles
+  /* ========================================================================== */
+  .sf-menu.nav > li > a:hover,
+  .sf-menu.nav > li > a:focus {
+    background-color: #232323;
+  }
+  .sf-menu li.megamenu > ul li ul li {
+    display: inline-block;
+    width: 85%;
+  }
+  /* ================HEADER STYLE-1 CSS START==================== */
+  .header-style-1 .sf-menu.nav > li > a:hover,
+  .header-style-1 .sf-menu.nav > li > a:focus {
+    background-color: #ffffff;
+  }
+  .header-style-1 .logo {
+    margin: 0;
+  }
+  .header-style-1 .header .header-search {
+    left: auto;
+    right: 25%;
+    top: 0;
+  }
+  .header-style-1 .navigation .nav.sf-menu {
+    display: inline;
+  }
+  .header-style-1 .header .navigation-wrapper,
+  .header-nav-1 .sf-menu ul li,
+  .header-nav-1 .sf-menu .megamenu li.sfHover {
+    background-color: #232323;
+  }
+  .header-nav-1 .sf-menu a,
+  .header-nav-1 .sf-menu li.megamenu .block-title {
+    color: #fff;
+  }
+  .header-nav-1 .sf-menu > li:hover,
+  .header-nav-1 .sf-menu li.active,
+  .header-nav-1 .sf-menu > li.active.sfHover > a,
+  .header-nav-1 .sf-menu ul a:hover {
+    color: #232323;
+    background-color: #fff ;
+  }
+  .header-nav-1 .sf-menu .megamenu li a:hover,
+  .header-nav-1 .sf-menu .megamenu li a:focus,
+  .header-nav-1 .megamenu .sf-menu > li.active a,
+  .header-nav-1 .sf-menu li li.sfHover > a,
+  .header-nav-1 .sf-menu li li.active {
+    background: transparent;
+  }
+  .header-nav-1 .sf-menu a:hover,
+  .header-nav-1 .sf-menu li.active > a {
+    color: #232323;
+  }
+  @media (max-width: 480px) {
+    .header-style-1 .logo {
+      margin: auto auto 30px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .header-style-1 .header .header-search {
+      right: 30%;
+    }
+  }
+  @media (max-width: 991px) {
+    .header-nav-1 .sf-menu li {
+      margin-bottom: 0 !important;
+    }
+    .header-nav-1 .sf-menu > li:hover,
+    .header-nav-1 .sf-menu li.active {
+      background: transparent;
+    }
+  }
+  /* ================HEADER STYLE-1 CSS END==================== */
+  /* ================HEADER STYLE-2 CSS START==================== */
+  .header-style-2 .top-bar .top-bar-left {
+    float: right;
+  }
+  .header-style-2 .top-bar .top-bar-right {
+    float: left;
+  }
+  .header-style-2 .top-bar .top-bar-left ul li {
+    margin-left: 20px;
+    margin-right: 0;
+  }
+  .header-style-2 .top-bar-left ul li:last-child {
+    padding-right: 0;
+  }
+  .header-style-2 .top-bar ul {
+    margin-left: 0;
+  }
+  .header-style-2 .header .header-search {
+    left: auto;
+    right: 15px;
+  }
+  .header-style-2 .header .header-cart {
+    left: 15px;
+    right: auto;
+  }
+  .header-style-2 .cart-wrapper {
+    margin-left: 0;
+  }
+  .header-style-2 .header {
+    border-bottom: medium none;
+  }
+  .header-style-2 .header .navigation-wrapper {
+    background-color: #fff;
+    border-bottom: 1px solid #d3d5d7;
+  }
+  .header-style-2 .navigation .nav.sf-menu {
+    /*    display: inline;*/
+  }
+  .header-nav-2 .sf-menu > li:hover,
+  .header-nav-2 .sf-menu > li:hover > a,
+  .header-nav-2 .sf-menu li.active,
+  .header-nav-2 .sf-menu > li.sfHover,
+  .header-nav-2 .sf-menu > li.sfHover > a {
+    color: #fff;
+  }
+  .header-nav-2 .sf-menu ul a:hover {
+    color: #fff;
+  }
+  .header-nav-2 .sf-menu li.megamenu ul a:hover {
+    background: transparent;
+  }
+  .header-nav-2 .sf-arrows > li > .sf-with-ul:focus::after,
+  .header-nav-2 .sf-arrows > li:hover > .sf-with-ul::after,
+  .header-nav-2 .sf-arrows > li.active > .sf-with-ul::after,
+  .header-nav-2 .sf-arrows > .sfHover > .sf-with-ul::after {
+    border-top-color: #ffffff;
+  }
+  .header-nav-2 .sf-menu a:hover {
+    color: #232323;
+  }
+  @media (max-width: 480px) {
+    .header-style-2 .top-bar .top-bar-left ul li {
+      margin-left: 10px;
+    }
+    .header-style-2 .header .header-cart {
+      left: 0;
+    }
+  }
