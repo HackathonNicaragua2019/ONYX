@@ -12,20 +12,37 @@
     <section class="page-section color">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
-                    <h3 class="block-title"><span>Registrarse</span></h3>
-                    <form action="#" class="form-login">
+                <form id="form-register" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-login">
+                    <div class="col-sm-6">
+                            <h3 class="block-title"><span>Registrarse</span></h3>
+                            <div class="row">
+                                <div class="col-md-12 hello-text-wrap">
+                                    <span class="hello-text text-thin"> Hola, crea tu cuenta desde aqui </span>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group"><input asp-for="Input.UserName" class="form-control" class="form-control" placeholder="Nombre de usuario"></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group"><input asp-for="Input.Email" class="form-control" placeholder="Correo"></div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <h3 class="block-title" style="padding: 7px"><span> </span></h3>
                         <div class="row">
                             <div class="col-md-12 hello-text-wrap">
-                                <span class="hello-text text-thin"> Hola, crea tu cuenta desde aqui </span>
+                                <span class="hello-text text-thin"> </span>
                             </div>
 
                             <div class="col-md-12">
-                                <div class="form-group"><input class="form-control" type="text" placeholder="User name or email"></div>
+                                <div class="form-group"><input asp-for="Input.Password" class="form-control" placeholder="Contraseña"></div>
                             </div>
+
                             <div class="col-md-12">
-                                <div class="form-group"><input class="form-control" type="password" placeholder="Your password"></div>
+                                <div class="form-group"><input asp-for="Input.ConfirmPassword" class="form-control" placeholder="Confirmación de contraseña"></div>
                             </div>
+
                             <div class="col-md-12 col-lg-6">
                                 <div class="checkbox">
                                     <label><input type="checkbox"> Recuerdame </label>
@@ -33,37 +50,15 @@
                             </div>
 
                             <div class="col-md-12 col-lg-6 text-right-lg">
-                                <a class="forgot-password" href="#"> Olvido su contraseña? </a>
+                                <a  class="forgot-password" href="#"> Olvido su contraseña? </a>
                             </div>
 
                             <div class="col-md-6">
-                                <a class="btn btn-theme btn-block btn-theme-dark" href="#">Login</a>
+                                <a onclick="document.getElementById('form-register').submit()" class="btn btn-theme btn-block btn-theme-dark">Login</a>
                             </div>
                         </div>
-                    </form>
-                </div>
-
-                <div class="col-sm-6">
-                    <h3 class="block-title"><span> </span></h3>
-                    <form action="#" class="form-login">
-                        <div class="row">
-                            <div class="col-md-12 hello-text-wrap">
-                                <span class="hello-text text-thin" style="padding: 12px"> </span>
-                            </div>
-
-                            <div class="col-md-12">
-                                <div class="form-group"><input class="form-control" type="text" placeholder="User name or email"></div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group"><input class="form-control" type="password" placeholder="Your password"></div>
-                            </div>
-                            
-
-                            
-                        </div>
-                    </form>
-                </div>
-                
+                    </div>
+                </form>
             </div>
         </div>
     </section>
