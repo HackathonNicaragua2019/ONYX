@@ -18,11 +18,19 @@ namespace OnyxPlataform.Controllers
         public ClassRoomController(AplicationDbContext context){
             _Context=context;
         }
+
         //index
         public IActionResult Index()
         {
             return View();
         }
+
+
+        public IActionResult Detalle()
+        {
+            return View("Detalle");
+        }
+
         //creacion de un classroom
         //funcion que crea los datos
         [HttpGet]
