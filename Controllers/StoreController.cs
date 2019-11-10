@@ -21,6 +21,12 @@ namespace OnyxPlataform.Controllers
             var list=await _Context.StoreList.ToListAsync();
             return View(list);
         }
+        //vista de una tyienda en especiofico
+        public async Task<IActionResult> ShowStore(string Id)
+        {
+            Store temp=await _Context.StoreList.FindAsync(Id);
+            return View(temp);
+        }
         //creacion de una Tienda
         [HttpGet]
         public IActionResult Create(string ID)
