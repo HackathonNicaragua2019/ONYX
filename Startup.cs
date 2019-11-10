@@ -32,6 +32,7 @@ namespace OnyxPlataform
             });
 
 
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -51,6 +52,7 @@ namespace OnyxPlataform
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseAuthentication();
             app.UseCookiePolicy();
 
             app.UseMvc(routes =>

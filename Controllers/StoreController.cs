@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using OnyxPlataform.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+
 namespace OnyxPlataform.Controllers
 {
     public class StoreController : Controller
@@ -16,6 +17,7 @@ namespace OnyxPlataform.Controllers
         public StoreController(AplicationDbContext context){
             _Context=context;
         }
+
         public async Task<IActionResult> Index()
         {
             var list=await _Context.StoreList.ToListAsync();
@@ -36,6 +38,8 @@ namespace OnyxPlataform.Controllers
             return View("ShowStore",temp);
         }
         //creacion de una Tienda
+
+        [Authorize]
         [HttpGet]
         public IActionResult Create(string ID)
         {
@@ -60,6 +64,7 @@ namespace OnyxPlataform.Controllers
 
         //funcion que edita una tienda
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> Edit(string id)
         {
             if(id==null){
@@ -72,7 +77,8 @@ namespace OnyxPlataform.Controllers
             return View(temp);
         }
         //funcion que edita en post los datos
-         [HttpPost]
+        
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string id, Store temp)
         {
@@ -91,6 +97,7 @@ namespace OnyxPlataform.Controllers
             
         }
         //funcion que elimina un tienda
+        [Authorize]
         public async Task<IActionResult> Delete(string id)
         {
             Store temp= await _Context.StoreList.FindAsync(id);
