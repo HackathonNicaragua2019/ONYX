@@ -23,6 +23,7 @@
                 Productos disponibles en 
                 @Model.StoreName
             </h3>
+            <a asp-controller="Store" asp-action="Edit" asp-route-Id="@Model.StoreId" class="btn-primary">Edita tu tienda!</a>
         </div>
         <div class="row">
             @foreach (var item in ViewBag.ProductList)
