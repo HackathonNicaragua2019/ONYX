@@ -55,9 +55,7 @@
             <div class="container">
                 <div class="top-bar-left">
                     <ul class="list-inline">
-                        <li class="icon-user"><a href="login.html"><img src="assets/img/icon-1.png" alt=""/> <span>Login</span></a></li>
-                        <li class="icon-form"><a href="login.html"><img src="assets/img/icon-2.png" alt=""/> <span>Not a Member? <span class="colored">Sign Up</span></span></a></li>
-                        <li><a href="mailto:support@yourdomain.com"><i class="fa fa-envelope"></i> <span>support@yourdomain.com</span></a></li>
+                        <partial name="_LoginPartial"/>
                     </ul>
                 </div>
                 <div class="top-bar-right">
@@ -130,7 +128,7 @@
                             <a href="#" class="menu-toggle-close btn"><i class="fa fa-times"></i></a>
                             <ul class="nav sf-menu">
                             
-                                <li><a >Kids</a></li>
+                                <li><a class="">Home</a></li>
                                 <li><a asp-controller="ClassRoom" asp-action="Index"> ClassRoom </a></li>
                                 <li><a asp-controller="Store" asp-action="Index"> Tienda </a></li>
                                 <li><a asp-controller="Store" asp-action="Create"> Crea tu tienda! </a></li>
@@ -341,7 +339,7 @@
 </body>
 
     <environment include="Development">
-       <partial name="_StylesPartial">
+       <partial name="_ValidationScriptsPartial">
     </environment>
     
 </html>
