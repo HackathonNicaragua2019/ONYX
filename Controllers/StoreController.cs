@@ -23,6 +23,12 @@ namespace OnyxPlataform.Controllers
             var list=await _Context.StoreList.ToListAsync();
             return View(list);
         }
+
+        public IActionResult store()
+        {
+            return View();
+        }
+
         //vista de una tyienda en especiofico
         public async Task<IActionResult> ShowStore(string Id)
         {

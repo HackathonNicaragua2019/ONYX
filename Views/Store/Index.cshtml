@@ -1,30 +1,58 @@
 @model List<OnyxPlataform.Models.Store>
 
+ <div class="content-area">
 
-<div class="container">
-    @foreach(var item in Model){
-      <table>
-          <tbody>
-              <tr>
-                  <td>
-                      <img src="assets/storeicon.jpg" height="100" width="100" alt="500/">
-                  </td>
-                  <td>
-                      <h3>Nombre de la tienda: @item.StoreName</h3>
-                  </td>
-                  <td>
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                  </td>
-                  <td>
-                      <a href="StoreController/ShowStore/@item.StoreId" class="btn btn-primary">Ver</a>
-                  </td>
-              </tr>
+                <!-- BREADCRUMBS -->
+    <section class="page-section breadcrumbs">
+        <div class="container">
+            <div class="page-header">
+                <h1> Tiendas ONYX </h1>
+            </div>
+            
+        </div>
+    </section>
+    <!-- /BREADCRUMBS -->
 
-          </tbody>
-      </table>
-    }
+    <!-- PAGE -->
+    <section class="page-section color no-padding-bottom">
+        <div class="container">
+
+            <div class="row wishlist" style="display: flex; justify-content:center;">
+                
+                <div class="col-md-10">
+                    <table class="table">
+                        @* <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Product Name</th>
+                                <th>Unit Price</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead> *@
+                        <tbody>
+
+                            @foreach(var item in Model) {
+                                
+                                 <tr>
+                                    <td class="image"><a class="media-link" href="#"><i class="fa fa-plus"></i><img src="assets/img/preview/shop/order-1.jpg" alt=""/></a></td>
+                                    <td class="description">
+                                        <h4><a href="#"> @item.StoreName </a></h4>
+                                        @item.StoreDescription
+                                    </td>
+                                    <td class="price">  </td>
+                                    <td class="add"><a class="btn btn-theme btn-theme-dark btn-icon-left" href="#"><i class="fa fa-shopping-cart"></i> Ir a tienda </a></td>
+                                </tr>
+                                
+                            }
+                        </tbody>
+                    </table>
+                    @*<a class="btn btn-theme btn-theme-transparent btn-icon-left btn-continue-shopping" href="#"><i class="fa fa-shopping-cart"></i>Continue shopping</a> *@
+                </div>
+            </div>
+        </div>
+    </section>
+
 </div>
+
+                      @* <a href="StoreController/ShowStore/@item.StoreId" class="btn btn-primary">Ver</a> *@
