@@ -1,0 +1,22 @@
+@model OnyxPlataform.Models.Store
+<div class="col-md-3 col-md-2">
+    <div class="card text-white bg-dark mb-3">
+        <div class="card-header">
+            <p><i class="fa fa-globe"></i> @Model.StoreName</p>
+        </div>
+        <div class="body">
+            <img src="/img/item/@Model.StoreId.jpg" alt="Card image cap" class="card-img-top img-fluid mb-0">
+            <h5 class="card-title">@Model.StoreMotto</h5>
+            <p> @Model.StoreDescription
+                <br>
+                Localizacion: @Model.StoreDirection
+                <br>
+                Tienda Mantenida por el Usuario: @Model.UserForum
+            </p>
+        </div>
+        <div class="card-footer text-muted text-right p-1">
+            <a class="btn-primary">Ver mas >>></a>
+        </div>
+    </div>
+</div>
+<br>
