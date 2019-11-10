@@ -1,9 +1,12 @@
 @model OnyxPlataform.Models.Store
-<div class=" card col-md-4 offset-md-4 p-0 mt-2">
-    <h3 class="card-header">
+<div class="row offset-md-4 p-0 mt-2"
+    style="padding: 40px 0; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <h3 class="card-header text-center">
         Creando Tu tienda Personal
     </h3>
     <div class="card-body">
+        <div> 
+
         <form asp-controller="StoreController" asp-action="Create" method="POST">
             <input asp-for="@Model.StoreId" value="@Model.StoreId">
             <input asp-for="@Model.UserDataId" value="@Model.UserDataId">
@@ -33,5 +36,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Guardar</button>
         </form>
+
+        
     </div>
 </div>
