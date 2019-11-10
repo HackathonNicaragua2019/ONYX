@@ -19,10 +19,8 @@ namespace OnyxPlataform.Controllers
             _Context=context;
         }
         //index
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            
-
             return View();
         }
         //creacion de un classroom
