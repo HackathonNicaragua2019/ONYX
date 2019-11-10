@@ -19,6 +19,8 @@
             <div class="top-bar-left">
                 <ul class="list-inline">
                     <partial name="_LoginPartial">
+
+                    <li class="icon-user"><a asp-area="Identity" asp-page="/Account/Register"> <span> Crear tienda </span></a></li>
                 </ul>
             </div>
             <div class="top-bar-right">
@@ -82,12 +84,12 @@
                                     
                                 </ul>
                             </li>
-                            <li><a href="#"> Blog </a>
+                            <li><a asp-controller="Store" asp-action="Index"> ClassRoom </a>
                                 <ul>
                                     
                                 </ul>
                             </li>
-                            <li><a href=""> ItemX </a>
+                            <li><a href=""> Tu zona </a>
                                 <ul>
                                     
                                 </ul>

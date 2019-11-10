@@ -2,7 +2,6 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
-<ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
     <li><a asp-area="Identity" asp-page="/Account/Manage/Index"><i class="fa fa-envelope"></i> <span> @UserManager.GetUserName(User) </span></a></li>
@@ -31,4 +30,3 @@ else
         <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
     </li> *@
 }
-</ul>
