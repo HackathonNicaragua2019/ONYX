@@ -4,7 +4,77 @@
     ViewData["Title"] = "Registrarse";
 }
 
-<h1>@ViewData["Title"]</h1>
+
+<!-- CONTENT AREA -->
+<div class="content-area">
+
+    <!-- PAGE -->
+    <section class="page-section color">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3 class="block-title"><span>Registrarse</span></h3>
+                    <form action="#" class="form-login">
+                        <div class="row">
+                            <div class="col-md-12 hello-text-wrap">
+                                <span class="hello-text text-thin"> Hola, crea tu cuenta desde aqui </span>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group"><input class="form-control" type="text" placeholder="User name or email"></div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group"><input class="form-control" type="password" placeholder="Your password"></div>
+                            </div>
+                            <div class="col-md-12 col-lg-6">
+                                <div class="checkbox">
+                                    <label><input type="checkbox"> Recuerdame </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-lg-6 text-right-lg">
+                                <a class="forgot-password" href="#"> Olvido su contraseña? </a>
+                            </div>
+
+                            <div class="col-md-6">
+                                <a class="btn btn-theme btn-block btn-theme-dark" href="#">Login</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-sm-6">
+                    <h3 class="block-title"><span> </span></h3>
+                    <form action="#" class="form-login">
+                        <div class="row">
+                            <div class="col-md-12 hello-text-wrap">
+                                <span class="hello-text text-thin" style="padding: 12px"> </span>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group"><input class="form-control" type="text" placeholder="User name or email"></div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group"><input class="form-control" type="password" placeholder="Your password"></div>
+                            </div>
+                            
+
+                            
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- /PAGE -->
+
+    
+
+</div>
+<!-- /CONTENT AREA -->
+
+@*<h1>@ViewData["Title"]</h1>
 
 <div class="row">
     <div class="col-md-4">
@@ -30,7 +100,7 @@
             <button type="submit" class="btn btn-primary">Registrarse</button>
         </form>
     </div>
-</div>
+</div>*@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
