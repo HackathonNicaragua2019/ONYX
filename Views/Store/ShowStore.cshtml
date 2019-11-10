@@ -29,26 +29,26 @@
             @foreach (var item in ViewBag.ProductList)
             {
                 <div class="col-md-3 col-md-2">
-                        <div class="card mb-3">
-                            <div class="card-header">
-                                <p><i class="fa fa-globe"></i> Producto Disponible</p>
-                            </div>
-                            <div class="body">
-                                <img src="/img/item/forum.jpg" alt="Card image cap" class="card-img-top img-fluid mb-0">
-                                <h5 class="card-title">@item.CatalogueProductName</h5>
-                                <p> @item.CatalogueProductDescription
-                                    <br>
-                                    Tipo de producto: @item.CatalogueProductType
-                                    <br>
-                                    Marca: @item.CatalogueProductBrand
-                                </p>
-                            </div>
-                            <div class="card-footer text-muted text-right p-1">
-                                <p>opciones de ver y comprar</p>
-                            </div>
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <p><i class="fa fa-globe"></i> Producto Disponible</p>
+                        </div>
+                        <div class="body">
+                            <img src="/img/item/forum.jpg" alt="Card image cap" class="card-img-top img-fluid mb-0">
+                            <h5 class="card-title">@item.CatalogueProductName</h5>
+                            <p> @item.CatalogueProductDescription
+                                <br>
+                                Tipo de producto: @item.CatalogueProductType
+                                <br>
+                                Marca: @item.CatalogueProductBrand
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted text-right p-1">
+                            <p>opciones de ver y comprar</p>
                         </div>
                     </div>
-                    <br>
+                </div>
+                <br>
             }
         </div>
     </div>
