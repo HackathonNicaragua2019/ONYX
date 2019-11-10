@@ -3,10 +3,28 @@
 
 <div class="container">
     @foreach(var item in Model){
-        <div class="alert alert-primary" role="alert">
-            Nombre de la Tienda:  @item.StoreName 
-            <br>
-            <a asp-controller="Store" asp-action="ShowStore" asp-route-Id="@item.StoreId" class=" btn btn-primary bg-dark"> ver mas..</a>
-        </div>
+      <table>
+          <tbody>
+              <tr>
+                  <td>
+                      <img src="assets/storeicon.jpg" height="100" width="100" alt="500/">
+                  </td>
+                  <td>
+                      <h3>Nombre de la tienda: @item.StoreName</h3>
+                  </td>
+                  <td>
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                  </td>
+                  <td>
+                      <a href="StoreController/ShowStore/@item.StoreId" class="btn btn-primary">Ver</a>
+                  </td>
+              </tr>
+
+          </tbody>
+      </table>
     }
 </div>
