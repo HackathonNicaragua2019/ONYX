@@ -1,11 +1,11 @@
-@model Onyxplataform.Models.Catalogue
+@model OnyxPlataform.Models.Catalogue
 <div class=" card col-md-4 offset-md-4 p-0 mt-2">
     <h3 class="card-header">
         Creando Tus Productos
     </h3>
     <div class="card-body">
         <form asp-controller="Catalogue" asp-action="Create" method="POST">
-            <input type="hidden" asp-for="@Model.CatalogueId" value="@Model.Catalogue.Id">
+            <input type="hidden" asp-for="@Model.CatalogueID" value="@Model.CatalogueID">
             <input  type="hidden" asp-for="@Model.StoreId" value="@Model.StoreId">
             <div class="form-group">
                 <label for="">Escribe el Nombre de tu Producto</label>
@@ -17,7 +17,7 @@
             </div>
                 <div class="form-group">
                 <label for="">Descripcion</label>
-                <input  class="form-control" asp-for="@Model.CatalogueProductDescription" id="" value="@Model.CatalogueProductdescription">
+                <input  class="form-control" asp-for="@Model.CatalogueProductDescription" id="" value="@Model.CatalogueProductDescription">
             </div>
                 <div class="form-group">
                 <label for="">Tipo de Producto</label>
@@ -25,7 +25,7 @@
             </div>
                 <div class="form-group">
                 <label for="">Fabricante</label>
-                <input  class="form-control" asp-for="@Model.CatalogueBuilder" id="" value="@Model.CatalogueProductBuilder">
+                <input  class="form-control" asp-for="@Model.CatalogueProductBuilder" id="" value="@Model.CatalogueProductBuilder">
             </div>
             <div class="form-group">
                 <label for="">Imagen de tu producto</label>
