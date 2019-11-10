@@ -80,3 +80,177 @@ a:hover .btn-play,
     border-left-color: #f1be03;
 }
 
+.sf-menu li.megamenu ul a:hover {
+    color: #f1be03;
+}
+.sf-menu li.sale a {
+    background-color: #f1be03;   
+}
+@media (max-width: 991px) {   
+    .sf-menu > li > a:hover {       
+        color: #f1be03;
+    }    
+}
+.footer {
+    border-top: solid 10px #f1be03;   
+}
+.main-slider .caption-subtitle {    
+    color: #f1be03;   
+}
+.main-slider .btn-theme:hover {
+    border-color: #f1be03;
+    background-color: #f1be03;   
+}
+.main-slider .dark .caption-text .btn-theme:hover {
+    background-color: #f1be03;
+    border-color: #f1be03;
+}
+.coming-soon .main-slider .page .countdown-amount { 
+    color: #f1be03;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+    border-color: #f1be03;
+    background-color: #f1be03;  
+}
+.message-box {    
+    background-color: #f1be03;  
+}
+.content-tabs .nav-tabs > li.active > a {   
+    color: #f1be03;
+}
+.post-title a:hover {
+    color: #f1be03;
+}
+.post-meta a:hover {
+    color: #f1be03;
+}
+.about-the-author .media-heading a:hover {
+    color: #f1be03;
+}
+.post-wrap blockquote {  
+    border-top: solid 6px #f1be03;  
+}
+.recent-post .media-category { 
+    color: #f1be03;
+}
+.recent-post .media-heading a:hover {
+    color: #f1be03;
+}
+.widget .recent-post .media-meta a:hover {
+    color: #f1be03;
+}
+.comment-author a:hover {
+    color: #f1be03;
+}
+.comment-date .fa {
+    color: #f1be03;  
+}
+.thumbnail.hover,
+.thumbnail:hover {
+    border: solid 1px #f1be03;
+}
+.caption-title a:hover {
+    color: #f1be03;
+}
+.thumbnail.thumbnail-banner .btn-theme:hover {
+    background-color: #f1be03;
+    border-color: #f1be03;
+}
+.recent-post .media-link:after{
+    background-color: rgba(241, 190, 3, 0);
+}
+
+.recent-post .media-link:hover:after {
+    background-color: rgba(241, 190, 3, 0.7);
+}
+.thumbnail-banner .caption {    
+    background-color: rgba(241, 190, 3, 0);
+}
+.thumbnail-banner.hover .caption,
+.thumbnail-banner:hover .caption {
+    background-color: rgba(241, 190, 3, 0.3);
+}
+.thumbnail .price ins {   
+    color: #f1be03;
+}
+.product-single .reviews:hover,
+.product-single .add-review:hover {
+    color: #f1be03;
+}
+.product-single .product-availability strong {
+    color: #f1be03;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    background-color: #f1be03;
+}
+.products.list .thumbnail .reviews:hover {
+    color: #f1be03;
+}
+.products.list .thumbnail .availability strong {
+    color: #f1be03;
+}
+.thumbnails.portfolio .thumbnail .caption.hovered {    
+    background-color: rgba(241, 190, 3, 0.5);
+}
+.widget.widget-shop-deals .countdown-amount {   
+    color: #f1be03;
+}
+.widget.widget-tabs .nav-justified > li.active > a,
+.widget.widget-tabs .nav-justified > li > a:hover,
+.widget.widget-tabs .nav-justified > li > a:focus {
+    border-color: #f1be03;
+    background-color: #f1be03;   
+}
+@media (min-width: 768px) {    
+    .widget.widget-tabs.alt .nav-justified > li.active > a:before {      
+        border-top: solid 5px #f1be03;
+    }
+}
+.widget.shop-categories ul a:hover {
+    color: #f1be03;
+}
+.widget-flickr-feed ul a:hover {
+    border-color: #f1be03;
+}
+.widget-flickr-feed ul a:hover:before {
+    background-color: rgba(241, 190, 3, 0.7);
+}
+.recent-tweets .media .fa {
+    color: #f1be03;
+}
+.product-list .price ins {   
+    color: #f1be03;
+}
+.product-list .media-link:after { 
+    background-color: rgba(241, 190, 3, 0);   
+}
+.product-list .media-link:hover:after {
+    background-color: rgba(241, 190, 3, 0.7);
+}
+.shop-sorting .col-sm-4 .btn-theme:hover {
+    background-color: #f1be03;
+}
+.orders td.description h4 a:hover {
+    color: #f1be03;
+}
+.orders td.total a:hover {
+    color: #f1be03;
+}
+.orders .media-link:after {    
+    background-color: rgba(241, 190, 3, 0);  
+}
+.orders .media-link:hover:after {
+    background-color: rgba(241, 190, 3, 0.7);
+}
+.wishlist td.description h4 a:hover {
+    color: #f1be03;
+}
+
+
+
+

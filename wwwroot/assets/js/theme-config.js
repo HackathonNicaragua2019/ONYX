@@ -26,7 +26,7 @@ var themeConfig = {
         var $this = this;
         if (this.init) return;
 
-        $('head').append($('<link rel="stylesheet">').attr('href', 'assets/js/theme-config.css'));
+        $('head').append($('<link rel="stylesheet">').attr('href', '~/assets/js/theme-config.css'));
         
         $this.setColor('yellow-1');
 
@@ -64,7 +64,7 @@ var themeConfig = {
         if (this.isChanging) {
             return false;
         }
-        $colorConfigLink.attr('href', 'assets/css/theme-' + color + '.css');
+        $colorConfigLink.attr('href', '~/assets/css/theme-' + color + '.css');
         $.cookie('color', color);
     },
     setLayout: function (layout) {
