@@ -1,0 +1,29 @@
+@model OnyxPlataform.Models.Product
+<div class="row">
+    <div class="card">
+        <h3 class="card-header"> Define las existencias de tus productos!</h3>
+        <div class="card-body">
+            <form asp-Controller="ProductController" asp-action="Create" method="POST">
+                <input type="hidden" asp-for="@Model.ProductID" value="@Model.ProductID">
+                <input type="hidden" asp-for="@Model.CatalogueId" value="@Model.CatalogueId">
+                <div  class="form-group">
+                    <Label>Ingresa el Numero serial de tu producto</Label>
+                    <input type="text" asp-for="@Model.ProductSerialNumber">
+                </div>
+                <div  class="form-group">
+                        <Label>Ingresa el precio del Producto</Label>
+                        <input type="text" asp-for="@Model.ProductPrice">
+                 </div>
+                 <div  class="form-group">
+                        <Label>Ingresa el precio el Color del Producto</Label>
+                        <input type="text" asp-for="@Model.ProductColor">
+                 </div>
+                 <div  class="form-group">
+                        <Label>Ingresa el precio el Peso del Producto</Label>
+                        <input type="text" asp-for="@Model.ProductWeight">
+                 </div>
+                 <button type="submit">Agregar</button> 
+            </form>
+        </div>
+    </div>
+</div>
