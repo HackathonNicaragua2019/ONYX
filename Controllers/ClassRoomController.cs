@@ -21,7 +21,7 @@ namespace OnyxPlataform.Controllers
         //index
         public async Task<IActionResult> Index()
         {
-            /*var list= await _Context.ClassRoomList.ToListAsync();*/
+            
 
             return View();
         }
