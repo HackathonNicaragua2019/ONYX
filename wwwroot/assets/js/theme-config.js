@@ -8,7 +8,7 @@ var themeConfig = {
     colors: [
         {
             'Hex': '#f1be03',
-            'colorName': 'yellow-1'
+            'colorName': 'yellow'
         },
         
     ],
@@ -27,7 +27,7 @@ var themeConfig = {
         if (this.init) return;
 
         $('head').append($('<link rel="stylesheet">').attr('href', 'assets/js/theme-config.css'));
-    
+        
         $this.setColor('yellow-1');
 
         if ($.cookie('layout') != null) {
@@ -68,7 +68,7 @@ var themeConfig = {
         $.cookie('color', color);
     },
     setLayout: function (layout) {
-        //$('body').removeAttr('class');
+        $('body').removeAttr('class');
         $('body').removeClass('wide').removeClass('boxed');
         $('body').addClass(layout);
         $.cookie('layout', layout);
