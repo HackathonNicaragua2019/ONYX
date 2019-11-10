@@ -19,7 +19,7 @@ namespace OnyxPlataform.Controllers
             _Context=context;
         }
         //index
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             /*var list= await _Context.ClassRoomList.ToListAsync();*/
 
